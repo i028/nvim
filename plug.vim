@@ -12,8 +12,11 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'junegunn/fzf'
 
 Plug 'c-oss/lualine.nvim'
+
 " If you want to have icons in your statusline choose one of these
-Plug 'kyazdani42/nvim-web-devicons'
+"Plug 'kyazdani42/nvim-web-devicons'
+
+Plug 'ryanoasis/vim-devicons'
 
 Plug 'jiangmiao/auto-pairs'
 
@@ -28,11 +31,13 @@ Plug 'sainnhe/everforest'
 Plug 'kevinhwang91/rnvimr'
 
 " defx 文件管理
-Plug 'c-oss/defx-icons'
-Plug 'shougo/defx.nvim'
+"Plug 'c-oss/defx-icons'
+"Plug 'shougo/defx.nvim'
 Plug 't9md/vim-choosewin'
 
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+
 Plug 'luochen1990/rainbow'
 
 " 注释
@@ -52,14 +57,17 @@ source ~/.config/nvim/plug/vim-airline.vim
 "source ~/.config/nvim/plug/lualine.vim
 
 " nvim-web-devicons
-source ~/.config/nvim/plug/nvim-web-devicons.vim
+"source ~/.config/nvim/plug/nvim-web-devicons.vim
 
 " Rnvimr is a NeoVim plugin that allows you to use Ranger in a floating window.
 source ~/.config/nvim/plug/rnvimr.vim
 
+" vim-devicons
+"source ~/.config/nvim/plug/vim-devicons
+
 " defx.nvim defx-icons vim-chooswin
-source ~/.config/nvim/plug/defx.vim
-source ~/.config/nvim/plug/defx-icons.vim
+"source ~/.config/nvim/plug/defx.vim
+"source ~/.config/nvim/plug/defx-icons.vim
 
 source ~/.config/nvim/plug/rainbow.vim
 source ~/.config/nvim/plug/kommentary.vim

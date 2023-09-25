@@ -122,6 +122,7 @@ local function project_list(config, callback)
 
   local function read_project(data)
     local res = {}
+    data = string.gsub(data, '%z', '')
     local dump = assert(loadstring(data))
     local list = dump()
     if list then
@@ -172,8 +173,8 @@ local function mru_list(config)
   local mlist = utils.get_mru_list()
 
   for _, file in pairs(vim.list_slice(mlist, 1, config.mru.limit)) do
-    local ft = vim.filetype.match({ filename = file })
-    local icon, group = utils.get_icon(ft)
+    local filename = vim.fn.fnamemodify(file, ':t')
+    local icon, group = utils.get_icon(filename)
     icon = icon or ' '
     if not utils.is_win then
       file = file:gsub(vim.env.HOME, '~')
@@ -446,6 +447,13 @@ local function theme_instance(config)
     api.nvim_buf_set_lines(config.bufnr, 0, 0, false, fill)
     vim.bo[config.bufnr].modifiable = false
     vim.bo[config.bufnr].modified = false
+    --defer until next event loop
+    vim.schedule(function()
+      api.nvim_exec_autocmds('User', {
+        pattern = 'DashboardLoaded',
+        modeline = false,
+      })
+    end)
     project_delete()
   end)
 end

@@ -10,8 +10,6 @@ set wrap
 set ignorecase
 set smartcase
 set cursorline
-set clipboard=unnamedplus
-set clipboard=unnamed
 
 syntax on
 

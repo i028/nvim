@@ -6,7 +6,7 @@
 " make Y to copy till the end of the line
 nnoremap Y y$
 " copy to system clipboard
-vnoremap Y "+y
+"vnoremap Y "+y
 
 " Split window
 nmap ss :split<Return><C-w>w
@@ -16,16 +16,16 @@ nmap sv :vsplit<Return><C-w>w
 map sh <C-w>h
 map sk <C-w>k
 map sj <C-w>j
-map sl <C-w>
+map sl <C-w>l
 
 " Resize window
 " 在mac/linux中使用Alt键，在webssh中alt没用，就使用Ctrl, WEBSSH主要的WINDOWS中使用
-nmap <M-left> <C-w><
-nmap <C-left> <C-w><
-nmap s<left> <C-w><
-nmap <M-right> <C-w>>
-nmap <C-right> <C-w>>
-nmap s<right> <C-w>>
+nmap <M-left> <C-w>>
+nmap <C-left> <C-w>>
+nmap s<left> <C-w>>
+nmap <M-right> <C-w><
+nmap <C-right> <C-w><
+nmap s<right> <C-w><
 nmap <M-up> <C-w>+
 nmap <C-up> <C-w>+
 nmap s<up> <C-w>+
@@ -41,10 +41,10 @@ inoremap <C-l> <Right>
 inoremap <C-d> <Delete>
 
 " 行首与行尾
-inoremap HH <Home>
-inoremap LL <End>
-nnoremap H ^
-nnoremap L $
+"inoremap HH <Home>
+"inoremap LL <End>
+"nnoremap H ^
+"nnoremap L $
 
 " jk <Esc>
 inoremap jk <Esc>
@@ -99,6 +99,11 @@ nmap <leader>w  <Plug>(choosewin)
 
 "markdown code自动复制
 nnoremap <silent><leader>yy <cmd>lua require('itkey.md').markdownCopyPlus()<CR>
+
+"vim-nerdtree-tabs
+"map <leader>n :NERDTreeTabsToggle<CR>
+nmap <leader>n <Plug>NERDTreeTabsToggle<CR>
+"nmap sn <Plug>NERDTreeTabsToggle<CR>
 
 
 
