@@ -65,12 +65,10 @@ map QQ <Esc>:q!<CR>
 " Coc智能处理，使用IDEA Alt+Enter 同样按键
 "noremap <M-Enter> :CocAction<CR>
 inoremap <C-s> <ESC> :w<CR>
-" 代码格式化
-"noremap <leader>f :Format<CR> 
-"noremap <leader>r :luafile ~/.wp/lua/run.lua<CR>
 
 " 重新加载设置
 map R :source $MYVIMRC<CR>
+
 "自动关闭标签
 inoremap <buffer> <C-v> <esc>yiwi<lt><esc>ea></><esc>hpF>i
 set iskeyword+=<,>
@@ -81,16 +79,17 @@ nmap <C-a> gg<S-v>G
 " 加/减数字2
 nnoremap + <C-a>
 nnoremap - <C-x>
+
 "===============
 "=== Buffers ===
 "===============
-
 " Open current directory
 "nmap te :tabedit
 "nmap <S-Tab> :tabprev<Return>
 nmap <S-Tab> :bprev<Return>
 "nmap <Tab> :tabnext<Return>
 nmap <Tab> :bnext<Return>
+
 " 窗口管理器
 " invoke with '-'
 nmap - <Plug>(choosewin)
@@ -100,11 +99,11 @@ nmap <leader>w  <Plug>(choosewin)
 "markdown code自动复制
 nnoremap <silent><leader>yy <cmd>lua require('itkey.md').markdownCopyPlus()<CR>
 
-"vim-nerdtree-tabs
-"map <leader>n :NERDTreeTabsToggle<CR>
-nmap <leader>n <Plug>NERDTreeTabsToggle<CR>
-"nmap sn <Plug>NERDTreeTabsToggle<CR>
-
+"nerdtree
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <C-t> :NERDTreeFocus<CR>
 
 
 "=== 插件KEY ===
