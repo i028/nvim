@@ -35,8 +35,7 @@ Plug 'kevinhwang91/rnvimr'
 "Plug 'shougo/defx.nvim'
 Plug 't9md/vim-choosewin'
 
-"Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
+Plug 'scrooloose/nerdtree'
 
 Plug 'luochen1990/rainbow'
 
